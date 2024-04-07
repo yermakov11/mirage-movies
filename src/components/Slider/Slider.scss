@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 500ms;
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .transition {
+        transition: transform 500ms;
+    }
+}

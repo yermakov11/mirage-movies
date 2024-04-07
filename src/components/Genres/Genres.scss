@@ -1,0 +1,54 @@
+.genres-movies {
+    margin: 70px 0;
+
+    .container-movies {
+        margin: 0 50px;
+
+        .genres-nav {
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: center;
+
+            .genres-list {
+                display: flex;
+                gap: 100px;
+                list-style-type: none;
+
+                .genre-item {
+                    cursor: pointer;
+                    border: 3px solid #CF7A2C;
+                    border-radius: 30px;
+                    max-width: 100%;
+                    width: 150px;
+                    text-align: center;
+                    padding: 5px 0;
+
+                    &:hover {
+                        transition: ease-in-out 0.1s;
+                        background-color: #3e3e5bb3;
+                    }
+
+                    &:active {
+                        background-color: #242454b3;
+                    }
+                }
+            }
+
+            a {
+                color: #CF7A2C;
+                background-color: transparent;
+                font-size: 20px;
+                text-transform: uppercase;
+                text-transform: uppercase;
+                list-style-type: none;
+                text-decoration: none;
+            }
+
+            .genres-content {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
