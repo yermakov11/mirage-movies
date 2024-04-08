@@ -1,0 +1,16 @@
+										Online movie theater 
+										Front-end part 
+1.Develop layout +
+2.Make layout +
+3.Make dynamic routing with API!
+4.Break the layout into components in React.js +
+5.Make a search engine.(And the whole API)+
+6.Make a page for genres(Dynamically)
+7.Find movie data in Json format +
+8.Filter movies by genre 
+______________________________________________________________________
+											Backend part
+Make work with video player(Change voiceover and subtitles)
+Add to favorites
+
+in the process: add commnet in the movie page
