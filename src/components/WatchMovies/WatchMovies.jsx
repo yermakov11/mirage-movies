@@ -5,11 +5,11 @@ import "./WatchMovies.scss";
 
 export default function WatchMovies() {
   const [movieList, setMovieList] = useState([]);
-
+  const KEY='6a5975a6ff005e72a1bb358d51dbb3ff';
   useEffect(() => {
     const fetchMoviesData = async () => {
       try {
-        const URL = 'https://api.themoviedb.org/3/discover/movie?api_key=6a5975a6ff005e72a1bb358d51dbb3ff';
+        const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}`;
         const response = await fetch(URL);
         const data = await response.json();
         setMovieList(data.results);
