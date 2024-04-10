@@ -101,8 +101,7 @@ export default function MoviePage() {
                       onChange={(e) => setComment({ ...comment, name: e.target.value })}
                       placeholder="name..."
                     />
-                    <input
-                      type="text"
+                    <input type="text"
                       className="input-message"
                       value={comment.text}
                       onChange={(e) => setComment({ ...comment, text: e.target.value })}

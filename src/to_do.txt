@@ -13,4 +13,4 @@ ______________________________________________________________________
 Make work with video player(Change voiceover and subtitles)
 Add to favorites
 
-in the process: add commnet in the movie page
+in the process: fix the search
