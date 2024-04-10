@@ -9,6 +9,16 @@ export default function MoviePage() {
   const [moviePost, setMoviePost] = useState(null);
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState(null);
+  const [comment, setComment] = useState({ name: "", text: "" });
+  const [messages, setMessages] = useState([]);
+
+  const sendComment = () => {
+    if (comment.text.trim() !== '' && comment.name.trim() !== '') {
+      const newMessage = `${comment.name}: ${comment.text}`;
+      setMessages([...messages, newMessage]);
+      setComment({ name: "", text: "" });
+    }
+  }
 
   useEffect(() => {
     const getMoviePost = async () => {
@@ -46,7 +56,7 @@ export default function MoviePage() {
   }
 
   return (
-    <div>
+    <main>
       {moviePost && (
         <div className="movie-page">
           <div className="block-movie-page">
@@ -72,9 +82,40 @@ export default function MoviePage() {
                 </div>
               )}
             </div>
+            <footer className="comments">
+              <h2>Comments</h2>
+              <div className="block-comments">
+                <div className="list-message">
+                  <ul>
+                    {messages.map((message, index) => (
+                      <li key={index}>{message}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex-comments">
+                  <div className="inputs">
+                    <input
+                      type="text"
+                      className="input-name"
+                      value={comment.name}
+                      onChange={(e) => setComment({ ...comment, name: e.target.value })}
+                      placeholder="name..."
+                    />
+                    <input
+                      type="text"
+                      className="input-message"
+                      value={comment.text}
+                      onChange={(e) => setComment({ ...comment, text: e.target.value })}
+                      placeholder="text comment..."
+                    />
+                  </div>
+                  <button><img src="../../public/img/image.png" alt="error" onClick={sendComment}/></button>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 }

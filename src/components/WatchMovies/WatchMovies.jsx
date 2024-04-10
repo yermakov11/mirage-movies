@@ -1,11 +1,12 @@
 // В WatchMovies.jsx
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import {KEY} from '../../data/key_movies'
 import "./WatchMovies.scss";
 
 export default function WatchMovies() {
   const [movieList, setMovieList] = useState([]);
-  const KEY='6a5975a6ff005e72a1bb358d51dbb3ff';
+ 
   useEffect(() => {
     const fetchMoviesData = async () => {
       try {

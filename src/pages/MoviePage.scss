@@ -17,5 +17,76 @@
             font-family: Kumar One;
             line-height: auto;
         }
+
+        .comments {
+            .block-comments {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                background-color: #070925;
+                height: 400px;
+                width: 336px;
+                border-radius: 10px;
+                border: 1px solid #070925;
+                padding: 10px;
+
+                .list-message {
+                    display: flex;
+                    justify-content: right;
+        
+                    li{
+                        text-align: center;
+                        list-style-type: none;
+                        color: rgba(255, 0, 191, );
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                    }
+                }
+
+                .flex-comments {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .input-name {
+                        margin-right: 10px;
+                        background-image: linear-gradient(to bottom, rgba(132, 67, 216, 0.7) 30%, rgba(216, 130, 197, 0.8) 70%);
+                        height: 35px;
+                        width: 100px;
+                        border-radius: 10px;
+                        color: rgba(255, 0, 191, );
+                        font-size: 18px;
+                        text-shadow: 0 0 5px rgb(255, 196, 0);
+                        margin-bottom: 10px;
+                    }
+                    .input-message{
+                        margin-right: 10px;
+                        background-image: linear-gradient(to bottom, rgba(132, 67, 216, 0.7) 30%, rgba(216, 130, 197, 0.8) 70%);
+                        height: 35px;
+                        width: 285px;
+                        border-radius: 10px;
+                        color: rgba(255, 0, 191);
+                        font-size: 18px;
+                        text-shadow: 0 0 5px rgb(255, 196, 0);
+                    }
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        margin-top: 16%;
+                        img {
+                            height: 39px;
+                            width: 44px;
+                            left: 262px;
+                            top: 401px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
     }
 }

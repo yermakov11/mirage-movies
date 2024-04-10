@@ -1,14 +1,14 @@
 import { useState } from "react";
 import {FaSearch} from "react-icons/fa";
+import { KEY } from "../../data/key_movies";
 import "./Header.scss";
 export default function Header() {
   const [searchMovie, setSearchMovie] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const handleSearch = async () => {
     try {
-      const apiKey = "6a5975a6ff005e72a1bb358d51dbb3ff";
-      const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${filterData}`;
-      const response = await fetch(apiUrl);
+      const URL = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${filterData}`;
+      const response = await fetch(URL);
       const data = await response.json();
       setSearchMovie(data.results);
       console.log(data.results);
