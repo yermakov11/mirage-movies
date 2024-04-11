@@ -14,3 +14,4 @@ Make work with video player(Change voiceover and subtitles)
 Add to favorites
 
 in the process: fix the search
+Разобрать комментарии на гите 
