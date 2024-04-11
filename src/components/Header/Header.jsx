@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {FaSearch} from "react-icons/fa";
 import { KEY } from "../../data/key_movies";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 export default function Header() {
   const [searchMovie, setSearchMovie] = useState([]);
@@ -58,8 +59,10 @@ export default function Header() {
                 {filterData&&searchMovie.length>0&&(
                   <div className="search-result">
                     <ul>
-                      {searchMovie.map((movie,index)=>(
-                        <li key={index}>{movie.title}</li>
+                      {searchMovie.map((movie)=>(
+                        <Link to={`/movie/${movie.id}`}>
+                            <li key={movie.id}>{movie.title}</li>
+                        </Link>
                       ))}
                     </ul>
                   </div>

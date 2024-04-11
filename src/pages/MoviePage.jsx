@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './MoviePage.scss'
 import axios from "axios";
 import { KEY } from "../data/key_movies";
+import Header from "../components/Header/Header";
 
 export default function MoviePage() {
   const { movieId } = useParams();
@@ -57,6 +59,8 @@ export default function MoviePage() {
 
   return (
     <main>
+      <Header/>
+      <Link to="/"><button className="back-btn">Back to Main Menu</button></Link>
       {moviePost && (
         <div className="movie-page">
           <div className="block-movie-page">
@@ -73,7 +77,7 @@ export default function MoviePage() {
                   <iframe
                     width="560"
                     height="315"
-                    src={`https://www.youtube.com/embed/${videos[5].key}`}
+                    src={`https://www.youtube.com/embed/${videos[0].key}`}
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -108,7 +112,7 @@ export default function MoviePage() {
                       placeholder="text comment..."
                     />
                   </div>
-                  <button><img src="../../public/img/image.png" alt="error" onClick={sendComment}/></button>
+                  <button><img src="../../public/img/image.png" alt="error" onClick={sendComment} /></button>
                 </div>
               </div>
             </footer>
