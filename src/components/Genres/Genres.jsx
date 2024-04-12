@@ -26,11 +26,6 @@ export default function Genres() {
                 Comedy
               </Link>
             </li>
-            <li className="genre-item">
-              <Link className="genre-link" href="#">
-                More
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>
