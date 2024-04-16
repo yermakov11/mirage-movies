@@ -2,22 +2,22 @@ import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { KEY } from "../../data/key_movies";
 import { Link } from "react-router-dom";
-// import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./Header.scss";
 export default function Header() {
   const [searchMovie, setSearchMovie] = useState([]);
   const [filterData, setFilterData] = useState([]);
-  // const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSearch = async () => {
     try {
       const URL = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${filterData}`;
       const response = await axios.get(URL);
       setSearchMovie(response.data.results);
-      // if (response.data.results.length > 0) {
-      //   history.push(`/movie/${movie.id}`);
-      // }
+      if (response.data.results.length > 0) {
+          navigate(`/movie/${movie.id}`);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
