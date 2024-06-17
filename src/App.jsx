@@ -6,7 +6,7 @@ function App() {
  return (
     <div>
       <Routes>
-        <Route path='/mirage-movies/' element={ <MainPage/>}/>
+        <Route path='/' element={ <MainPage/>}/>
         <Route path='/movie/:movieId' element={<MoviePage/>}/>
       </Routes>
     </div>
