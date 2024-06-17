@@ -16,7 +16,7 @@ export default function Header() {
       const response = await axios.get(URL);
       setSearchMovie(response.data.results);
       if (response.data.results.length > 0) {
-          navigate(`/movie/${movie.id}`);
+          navigate(`/mirage-movies/${movie.id}`);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
