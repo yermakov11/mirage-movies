@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './MoviePage.scss'
 import axios from "axios";
-import {KEY} from "../data/key_movies";
+// import {KEY} from "../data/key_movies";
 import Header from "../components/Header/Header";
 
 export default function MoviePage() {
@@ -25,6 +25,7 @@ export default function MoviePage() {
   useEffect(() => {
     const getMoviePost = async () => {
       try {
+        const KEY='6a5975a6ff005e72a1bb358d51dbb3ff'
         const URL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${KEY}`;
         const response = await axios.get(URL);
         setMoviePost(response.data);
