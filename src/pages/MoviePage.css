@@ -1,0 +1,90 @@
+main .back-btn {
+  position: fixed;
+  background-color: #CF7A2C;
+  width: 100px;
+  font-size: 16px;
+  color: rgb(18, 3, 3);
+  top: 20px;
+  left: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+main .movie-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+main .movie-page .block-movie-page {
+  width: 300px;
+  height: 500px;
+}
+main .movie-page .block-movie-page p {
+  color: #ffffff;
+  text-align: left;
+  vertical-align: text-top;
+  font-size: 16px;
+  font-family: Kumar One;
+  line-height: auto;
+}
+main .movie-page .block-movie-page .comments .block-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #070925;
+  height: 400px;
+  width: 336px;
+  border-radius: 10px;
+  border: 1px solid #070925;
+  padding: 10px;
+}
+main .movie-page .block-movie-page .comments .block-comments .list-message {
+  display: flex;
+  justify-content: right;
+}
+main .movie-page .block-movie-page .comments .block-comments .list-message li {
+  text-align: center;
+  list-style-type: none;
+  color: rgb(255, 0, 191);
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+main .movie-page .block-movie-page .comments .block-comments .flex-comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .movie-page .block-movie-page .comments .block-comments .flex-comments .input-name {
+  margin-right: 10px;
+  background-image: linear-gradient(to bottom, rgba(132, 67, 216, 0.7) 30%, rgba(216, 130, 197, 0.8) 70%);
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  color: rgb(255, 0, 191);
+  font-size: 18px;
+  text-shadow: 0 0 5px rgb(255, 196, 0);
+  margin-bottom: 10px;
+}
+main .movie-page .block-movie-page .comments .block-comments .flex-comments .input-message {
+  margin-right: 10px;
+  background-image: linear-gradient(to bottom, rgba(132, 67, 216, 0.7) 30%, rgba(216, 130, 197, 0.8) 70%);
+  height: 35px;
+  width: 285px;
+  border-radius: 10px;
+  color: rgb(255, 0, 191);
+  font-size: 18px;
+  text-shadow: 0 0 5px rgb(255, 196, 0);
+}
+main .movie-page .block-movie-page .comments .block-comments .flex-comments button {
+  background-color: transparent;
+  border: none;
+  margin-top: 16%;
+}
+main .movie-page .block-movie-page .comments .block-comments .flex-comments button img {
+  height: 39px;
+  width: 44px;
+  left: 262px;
+  top: 401px;
+  cursor: pointer;
+}/*# sourceMappingURL=MoviePage.css.map */
