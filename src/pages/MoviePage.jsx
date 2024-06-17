@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './MoviePage.scss'
 import axios from "axios";
-import { KEY } from "../data/key_movies";
+import {KEY} from "../data/key_movies";
 import Header from "../components/Header/Header";
 
 export default function MoviePage() {
