@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import { KEY } from "../../data/key_movies";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
@@ -12,6 +11,7 @@ export default function Header() {
 
   const handleSearch = async () => {
     try {
+      const KEY='6a5975a6ff005e72a1bb358d51dbb3ff'
       const URL = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${filterData}`;
       const response = await axios.get(URL);
       setSearchMovie(response.data.results);
