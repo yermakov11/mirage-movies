@@ -1,7 +1,6 @@
 // В WatchMovies.jsx
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import {KEY} from '../../data/key_movies'
 import "./WatchMovies.scss";
 
 export default function WatchMovies() {
@@ -10,6 +9,7 @@ export default function WatchMovies() {
   useEffect(() => {
     const fetchMoviesData = async () => {
       try {
+        const KEY='6a5975a6ff005e72a1bb358d51dbb3ff'
         const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}`;
         const response = await fetch(URL);
         const data = await response.json();
