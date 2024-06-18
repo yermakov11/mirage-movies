@@ -40,11 +40,11 @@ export default function Header() {
   return (
     <header className="flex-header">
       <section className="logo">
-        <img src="../../../public/img/Logo.png" className="logo-header" alt="error" />
+        <img src="/mirage-movies/public/img/Logo.png" className="logo-header" alt="error" />
       </section>
       <section className="searchBar">
         <div className="header-content">
-          <img className="header-img" src="../../../public/img/header-img.svg" alt="#" />
+          <img className="header-img" src="/mirage-movies/public/img/header-img.svg" alt="#" />
           <nav className="header-nav">
             <ul className="header-list">
               <li className="header-item">
@@ -86,7 +86,7 @@ export default function Header() {
               <FaSearch className="search_loop" onClick={hanndleMoonClick} />
             </div>
           </nav>
-          <img className="header-img_2" src="../../../public/img/header-img.svg" alt="#" />
+          <img className="header-img_2" src="/mirage-movies/public/img/header-img.svg" alt="#" />
         </div>
       </section>
     </header>
