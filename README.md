@@ -1,5 +1,7 @@
 # Mirage Movies
 
+**Warning**: If your markup is not correct, please check the scale of your screen
+
 **Mirage Movies** is an online cinema platform for watching movies and TV series in English. It not only offers a wide selection of content but also provides a unique feature for learning English while watching your favorite shows and movies. With interactive tools, users can enhance their language skills in a fun and engaging way.
 
 ## Table of Contents
