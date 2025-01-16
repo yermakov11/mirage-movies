@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import './MoviePage.scss'
 import axios from "axios";
+import send_message from '../assets/img/send-message.png'
 import Header from "../components/Header/Header";
 
 export default function MoviePage() {
@@ -59,7 +60,7 @@ export default function MoviePage() {
 
   return (
     <main>
-      <Header/>
+      <Header />
       <Link to="/mirage-movies/"><button className="back-btn">Back to Main Menu</button></Link>
       {moviePost && (
         <div className="movie-page">
@@ -112,7 +113,7 @@ export default function MoviePage() {
                       placeholder="text comment..."
                     />
                   </div>
-                  <button><img src="../../public/img/image.png" alt="error" onClick={sendComment} /></button>
+                  <button><img src={send_message} alt="error" onClick={sendComment} /></button>
                 </div>
               </div>
             </footer>

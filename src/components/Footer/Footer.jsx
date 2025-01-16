@@ -16,7 +16,7 @@ export default function Footer() {
             dictionary.
           </p>
           <div className="footer-cont__logo">
-            <h3 className="footer-cont__title">© 2024 Mirage movies</h3>
+            <h3 className="footer-cont__title">© 2025 Mirage movies</h3>
           </div>
         </div>
       </div>

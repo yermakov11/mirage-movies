@@ -9,8 +9,9 @@
 7.Find movie data in Json format +
 8.Filter movies by genre 
 ______________________________________________________________________
-											Backend part
-Make work with video player(Change voiceover and subtitles)
-Add to favorites
-
+											
 in the process: fix the search
+
+To do at the moment:
+1. fix image on main page
+2. fix images on page with movies 

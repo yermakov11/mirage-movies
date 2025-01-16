@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/img/Logo.png'
+import header_img from '../../assets/img/header-img.svg';
 import axios from "axios";
 import "./Header.scss";
 export default function Header() {
@@ -40,11 +42,11 @@ export default function Header() {
   return (
     <header className="flex-header">
       <section className="logo">
-        <img src="./img/Logo.png" className="logo-header" alt="error" />
+        <img src={logo} className="logo-header" alt="error" />
       </section>
       <section className="searchBar">
         <div className="header-content">
-          <img className="header-img" src="./img/header-img.svg" alt="#" />
+          <img className="header-img" src={header_img} alt="#" />
           <nav className="header-nav">
             <ul className="header-list">
               <li className="header-item">
@@ -86,7 +88,7 @@ export default function Header() {
               <FaSearch className="search_loop" onClick={hanndleMoonClick} />
             </div>
           </nav>
-          <img className="header-img_2" src="./img/header-img.svg" alt="#" />
+          <img className="header-img_2" src={header_img} alt="#" />
         </div>
       </section>
     </header>

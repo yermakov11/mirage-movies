@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from 'axios'
-// import { slidersData } from "../../data/slidersData";
+import axios from "axios";
 import "./Slider.scss";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
@@ -10,16 +9,10 @@ export default function Slider() {
     height: "50px",
     cursor: "pointer",
   };
-  const fixedImageHeight = 400;
-  const stretchedImageWidth = 1300;
-  const styleImage = {
-    width: `${stretchedImageWidth}px`,
-    height: `${fixedImageHeight}px`,
-    objectFit: "cover",
-    borderRadius: "12px",
-  };
+
   const [slideIndex, setSlideIndex] = useState(0);
   const [slidersData, setSliderData] = useState([]);
+  const visibleSlides = 4;
 
   useEffect(() => {
     const movieData = async () => {
@@ -41,35 +34,45 @@ export default function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 2000); 
+    }, 3000); 
     return () => clearInterval(interval);
-  },);
+  }, [slidersData]);
 
   const nextSlide = () => {
-    setSlideIndex((prevIndex) => (prevIndex + 1) % slidersData.length);
+    setSlideIndex((prevIndex) => (prevIndex + visibleSlides) % slidersData.length);
   };
 
   const prevSlide = () => {
-    setSlideIndex((prevIndex) => prevIndex === 0 ? slidersData.length - 1 : prevIndex - 1);
+    setSlideIndex((prevIndex) =>
+      prevIndex === 0 ? slidersData.length - visibleSlides
+      : (prevIndex - visibleSlides + slidersData.length) % slidersData.length
+    );
   };
 
   return (
     <section>
-      <h1 style={{ textAlign: "center", fontSize: "35px" }}>New movies</h1>
-      <div className="slider">
-        <SlArrowLeft  style={stylesArrow} onClick={prevSlide} />
-        {slidersData.map((slide, index) => (
-          <div
-            className={index === slideIndex ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === slideIndex && (
-              <img src={`https://image.tmdb.org/t/p/original/${slide.poster_path}`} style={styleImage}  alt={`Slide ${index}`} />
-            )}
-          </div>
-        ))}
-        <SlArrowRight style={stylesArrow} onClick={nextSlide} />
+      <h1>New Movies</h1>
+      <div className="carousel">
+        <SlArrowLeft className="arrow-style" style={stylesArrow} onClick={prevSlide}/>
+        <div className="carousel-track">
+          {slidersData.map((slide, index) => (
+            <div className="carousel-slide" key={index}
+              style={{
+                transform: `translateX(-${slideIndex * (100 / visibleSlides)}%)`,
+                flex: `0 0 calc(100% / ${visibleSlides})`,
+              }}
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/original${slide.poster_path}`}
+                alt={slide.title || `Slide ${index}`}
+                className="api_image"
+              />
+            </div>
+          ))}
+        </div>
+        <SlArrowRight className="arrow-style" style={stylesArrow} onClick={nextSlide}/>
       </div>
     </section>
   );
 }
+
